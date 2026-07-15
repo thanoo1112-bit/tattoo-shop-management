@@ -9,48 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50:  "#fff7ed",
-          100: "#ffedd5",
-          200: "#fed7aa",
-          300: "#fdba74",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
-          700: "#c2410c",
-          800: "#9a3412",
-          900: "#7c2d12",
-        },
-        gold: {
-          400: "#fbbf24",
-          500: "#f59e0b",
-          600: "#d97706",
-        },
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        accent: {
+          gold: "#d4a843",
+          "gold-hover": "#b88e2f",
+          charcoal: "#0a0a0f",
+          card: "#121218",
+          border: "rgba(255, 255, 255, 0.08)",
+        }
       },
       fontFamily: {
-        sans: ["Noto Sans Thai", "Inter", "sans-serif"],
-      },
-      animation: {
-        "fade-in": "fadeIn 0.3s ease-in-out",
-        "slide-up": "slideUp 0.3s ease-out",
-        "bounce-soft": "bounceSoft 0.6s ease-in-out",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideUp: {
-          "0%": { transform: "translateY(10px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        bounceSoft: {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.05)" },
-        },
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
     },
   },
   plugins: [],
+  darkMode: "class"
 };
 export default config;
